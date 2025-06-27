@@ -44,7 +44,7 @@ function Servicios() {
                 loop
                 playsInline
               >
-                <source src="/images/about/IPMA.mp4" type="video/mp4" />
+                <source src="/images/about/" type="video/mp4" />
               </video>
             </div>
 
