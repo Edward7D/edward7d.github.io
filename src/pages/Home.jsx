@@ -25,7 +25,7 @@ function Home() {
             {/* Columna del texto */}
             <div className="col-md-6 col-sm-12">
               <div className="about-cont">
-                <div className="encabezado-tema">
+                <div className="encabezado-tema" >
                   <h2>
                     Únete al Colegio de Ingenieros Industriales, Electromecánicos, en Energías y Afines de Querétaro A.C.
                   </h2>

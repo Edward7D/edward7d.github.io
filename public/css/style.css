@@ -838,7 +838,7 @@ footer {
 #footer .inside {
 	display: flex;
 	flex-direction: column;
-   padding:80px 0;
+  padding: 40px 0; /* ORIGINAL: 80px 0;*/
 
 }
 #footer .inside h4 {
@@ -867,7 +867,7 @@ footer {
 }
  #footer .inside .social {
 	text-align:center;
-	padding-top: 45px;
+	padding-top: 20px; /* ORIGINAL: 45px */
 }
 #footer .bottom-footer {
 	background: #1c1c1c;
@@ -877,7 +877,7 @@ footer {
 #footer .bottom-footer p {
 	color: #808080;
 	font-size: 1.4rem;
-	padding: 30px 8%;
+	padding: 15px 8%; /* Antes: 30px  8%;*/
     line-height: 1.4; 
     text-align:center;	
 	margin-bottom:0px;
@@ -988,8 +988,9 @@ footer {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  font-size: 1.8rem; /* Tamano de letra*/
+  font-size: 2rem; /* Tamano de letra*/
   text-align: left;
+  text-align: center;
 }
 
 .justificado {

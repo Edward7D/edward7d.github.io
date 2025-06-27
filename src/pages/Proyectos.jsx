@@ -4,24 +4,14 @@ function Proyectos() {
   return (
     <div>
 
-
-      
-
-                      {/* Breadcrumb */}
-<section className="breadcrumbSec">
-  <div className="overlay"></div>
-  <img
-    src="/images/breadcum/proyectos.jpeg"
-    alt="breadcrumb background"
-    className="breadcrumbImage"
-  />
-  {/* <div className="container">
-    <div className="row">
-      <div className="col-xs-12 text-center breadsec">
-        <h1 className="breadTitle">PROYECTOS</h1>
-      </div>
-    </div>
-  </div> */}
+    {/* IMAGEN DE FONDO */}
+    <section className="breadcrumbSec">
+      <div className="overlay"></div>
+      <img
+        src="/images/imgFondo/proyectos.jpeg"
+        alt="breadcrumb background"
+        className="breadcrumbImage"
+      />
 </section>
 
 

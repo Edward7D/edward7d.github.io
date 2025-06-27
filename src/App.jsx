@@ -9,9 +9,9 @@ import Peritos from './pages/Peritos';
 import Servicios from './pages/Servicios';
 import Proyectos from './pages/Proyectos';
 import ProjectDetail from './pages/ProjectDetail';
- import ProjectFilter from './components/ProjectFilter'; 
+import ProjectFilter from './components/ProjectFilter'; 
 import Especialidad from './pages/Especialidad';
-
+import UsuariosEspecialidades from './components/UsuariosEspecialidades';
 
 export default function App() {
   return (
@@ -27,6 +27,7 @@ export default function App() {
         <Route path="/" element={<ProjectFilter />} />
         <Route path="/proyecto/:id" element={<ProjectDetail />} />
         <Route path="/especialidad/:id" element={<Especialidad />} />
+        <Route path="/usuarios_esp" element={<UsuariosEspecialidades />} />
       </Routes>
 
       <Footer />

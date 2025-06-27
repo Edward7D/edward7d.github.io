@@ -16,18 +16,18 @@ const Especialidad = () => {
 
   return (
     <>
-      {/* Breadcrumb */}
+    {/* IMAGEN DE FONDO */}
       <section className="breadcrumbSec">
         <div className="overlay"></div>
         <img
-          src="/images/breadcum/proyectos.jpeg"
+          src="/images/imgFondo/proyectos.jpeg"
           alt="breadcrumb background"
           className="breadcrumbImage"
         />
         <div className="container">
           <div className="row">
             <div className="col-xs-12 text-center breadsec">
-              <h1 className="breadTitle">ESPECIALIDADES</h1>
+              <h1 className="breadTitle">Aqui ira la imagen de fondo de Especialidades</h1>
             </div>
           </div>
         </div>

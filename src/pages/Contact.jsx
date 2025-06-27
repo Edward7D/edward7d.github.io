@@ -3,16 +3,16 @@ function Contact() {
   return (
     <div>
 
-              {/* Breadcrumb */}
-<section className="breadcrumbSec">
-  <div className="overlay"></div>
-  <img
-    src="/images/breadcum/contacto.jpeg"
-    alt="breadcrumb background"
-    className="breadcrumbImage"
-  />
+              {/* IMAGEN DE FONDO */}
+          <section className="breadcrumbSec">
+            <div className="overlay"></div>
+            <img
+              src="/images/imgFondo/contacto.jpeg"
+              alt="breadcrumb background"
+              className="breadcrumbImage"
+            />
 
-</section>
+          </section>
 
 
       {/* Contact Section */}

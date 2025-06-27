@@ -4,15 +4,15 @@ function Peritos() {
   return (
     <div>
 
-                            {/* Breadcrumb */}
-<section className="breadcrumbSec">
-  <div className="overlay"></div>
-  <img
-    src="/images/breadcum/peritos.jpeg"
-    alt="breadcrumb background"
-    className="breadcrumbImage"
-  />
-</section>
+     {/* IMAGEN DE FONDO */}
+    <section className="breadcrumbSec">
+      <div className="overlay"></div>
+      <img
+        src="/images/imgFondo/peritos.jpeg"
+        alt="breadcrumb background"
+        className="breadcrumbImage"
+      />
+    </section>
 
 
        {/*  <!--PERITOS PAGINA start--> */}
