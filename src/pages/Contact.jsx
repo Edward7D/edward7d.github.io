@@ -42,40 +42,37 @@ function Contact() {
               </div>
             </div>
 
+            {/* Formulario */}
             <div className="col-sm-8">
               <h2 className="commentTitle">Envíanos un Mensaje</h2>
               <div className="commentForm">
-                <form action="#" method="post" id="contactForm">
+                <form action="https://formsubmit.co/eduardomtzduarte09@gmail.com" method="POST" id="contactForm">
                   <div className="row">
                     <div className="col-lg-6 formmargin">
                       <input
                         type="text"
                         placeholder="Nombre"
-                        name="con_name"
-                        id="con_name"
-                        className="required"
+                        name="Nombre"
+                        required
                       />
                       <input
                         type="email"
                         placeholder="Correo Electrónico"
-                        name="con_email"
-                        id="con_email"
-                        className="required"
+                        name="Email"
+                        required
                       />
                       <input
-                        type="url"
-                        placeholder="Sitio Web"
-                        name="con_url"
-                        id="con_url"
-                        className="required"
+                        type="text"
+                        placeholder="Asunto"
+                        name="Asunto"
+                        required
                       />
                     </div>
                     <div className="col-lg-6">
                       <textarea
                         placeholder="Mensaje"
-                        id="con_message"
-                        name="con_message"
-                        className="required"
+                        name="Mensaje"
+                        required
                       ></textarea>
                     </div>
                     <div className="col-lg-12">
@@ -84,12 +81,16 @@ function Contact() {
                       </button>
                     </div>
                   </div>
+                  <input type="hidden" name="_next" value="https://edward7d.github.io/"></input>
+                  {/* <input type="hidden" name="_next" value="https://tu-dominio.com/"></input>  Cuando se suba al servidor*/}
+                  <input type="hidden" name="_captcha" value="false"></input>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </section>
+       {/* Formulario end */}
 
      {/* Google Map */}
 <section className="contactMap">
