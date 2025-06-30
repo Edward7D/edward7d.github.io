@@ -1,19 +1,32 @@
+import { useEffect } from "react";
 
 function Contact() {
+  useEffect(() => {
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", () => {
+      // Mostrar el mensaje
+      const message = document.getElementById("successMessage");
+      message.style.display = "block";
+
+      // Ocultar después de 3 segundos
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 3000);
+    });
+  }, []);
+
   return (
     <div>
 
-              {/* IMAGEN DE FONDO */}
-          <section className="breadcrumbSec">
-            <div className="overlay"></div>
-            <img
-              src="/images/imgFondo/contacto.jpeg"
-              alt="breadcrumb background"
-              className="breadcrumbImage"
-            />
-
-          </section>
-
+      {/* IMAGEN DE FONDO */}
+      <section className="breadcrumbSec">
+        <div className="overlay"></div>
+        <img
+          src="/images/imgFondo/contacto.jpeg"
+          alt="breadcrumb background"
+          className="breadcrumbImage"
+        />
+      </section>
 
       {/* Contact Section */}
       <section className="blogSection">
@@ -81,34 +94,56 @@ function Contact() {
                       </button>
                     </div>
                   </div>
-                  <input type="hidden" name="_next" value="https://edward7d.github.io/"></input>
-                  {/* <input type="hidden" name="_next" value="https://edward7d.github.io/"></input>  Cuando se suba al servidor*/}
-                  <input type="hidden" name="_captcha" value="false"></input>
+                  
+                  <input type="hidden" name="_next" value="https://edward7d.github.io/Contact" />
+                   {/* <input type="hidden" name="_next" value="https://TUDOMINIO.COM/Contact" />  Servidor */}
+                  {/* <input type="hidden" name="_next" value="http://localhost:5173/Contact" />  Localhost */}
+                  {/* Desactiva captcha */}
+                  <input type="hidden" name="_captcha" value="false" />
                 </form>
               </div>
             </div>
           </div>
         </div>
       </section>
-       {/* Formulario end */}
 
-     {/* Google Map */}
-<section className="contactMap">
-  <div id="map">
-    <iframe
-      title="MAPA CIENQRO"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.083631644043!2d-100.44211228444982!3d20.548211579488996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d34f63ee1e12c5%3A0xd98566432b937b80!2sCIENQRO%20-%20COLEGIO%20DE%20INGENIEROS%20INDUSTRIALES%2C%20ELECTROMEC%C3%81NICOS%2C%20EN%20ENERG%C3%8DAS%20Y%20AFINES%20DE%20QUER%C3%89TARO!5e0!3m2!1ses!2smx!4v1685123456789!5m2!1ses!2smx"
-      width="100%"
-      height="450"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-</section>
+      {/* Google Map */}
+      <section className="contactMap">
+        <div id="map">
+          <iframe
+            title="MAPA CIENQRO"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.083631644043!2d-100.44211228444982!3d20.548211579488996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d34f63ee1e12c5%3A0xd98566432b937b80!2sCIENQRO%20-%20COLEGIO%20DE%20INGENIEROS%20INDUSTRIALES%2C%20ELECTROMEC%C3%81NICOS%2C%20EN%20ENERG%C3%8DAS%20Y%20AFINES%20DE%20QUER%C3%89TARO!5e0!3m2!1ses!2smx!4v1685123456789!5m2!1ses!2smx"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      {/* Mensaje de éxito */}
+      <div
+        id="successMessage"
+        style={{
+          display: "none",
+          position: "fixed",
+          top: "20px",
+          right: "20px",
+          backgroundColor: "#28a745",
+          color: "white",
+          padding: "12px 20px",
+          borderRadius: "4px",
+          boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
+          zIndex: 9999,
+          fontSize: "16px"
+        }}
+      >
+        ¡Tu mensaje fue enviado con éxito!
+      </div>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
