@@ -81,8 +81,8 @@ function Contact() {
                       </button>
                     </div>
                   </div>
-                  <input type="hidden" name="_next" value="https://edward7d.github.io/"></input>
-                  {/* <input type="hidden" name="_next" value="https://tu-dominio.com/"></input>  Cuando se suba al servidor*/}
+                  <input type="hidden" name="_next" value="http://localhost:5173/"></input>
+                  {/* <input type="hidden" name="_next" value="https://edward7d.github.io/"></input>  Cuando se suba al servidor*/}
                   <input type="hidden" name="_captcha" value="false"></input>
                 </form>
               </div>
