@@ -858,13 +858,12 @@ footer {
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 }
-#footer .inside p>a:hover {
-	color: #cc8f52;
-	text-decoration: none;
-}
+
 .contact-info {
     text-align: center;
+    
 }
+
  #footer .inside .social {
 	text-align:center;
 	padding-top: 20px; /* ORIGINAL: 45px */
@@ -896,7 +895,7 @@ footer {
     transition: all 0.3s;
     border-radius: 50%;
     vertical-align: middle; /* para alinear verticalmente */
-    line-height: 24px; /* puedes ajustar */
+    line-height: 24px; 
 }
 
 .social i:hover {
@@ -905,15 +904,14 @@ footer {
 	border: 1px solid #cc8f52;
 }
 
-.social-icon:hover {
+.social-icon:hover {     /* Icono twitter */
   background: #cc8952;
   color: #fff;
   border: 1px solid #cc8f52;
 }
 
 
-/*=======================================================================
- // About Page =========================================================================*/
+/*==========================================================================================*/
 /**==================== SLIDERS TODAS PAGINAS ======================**/
 
 .breadcrumbSec {
@@ -1099,9 +1097,6 @@ padding-top: 40px
  .teamImg img{
      width: 100%;
      height: auto;
-    /*aspect-ratio: 1/1;
-     object-fit: cover;   /* EN CASO DE QUE NO SEA RESPONSIVA ACTIVAR TODO */ 
-      /*border-radius: 8px; /* opcional: bordes redondeados */ 
 }
  .teamDec{
      margin-left: 15px;
@@ -1140,7 +1135,7 @@ padding-top: 40px
 }
 
 .team_sect {
-  width: 19%; /* 5 cards per row (5 x 19% = 95%) */
+  width: 19%; /* 5 cartas por (5 x 19% = 95%) */
   margin-bottom: 30px;
 }
 
@@ -1216,9 +1211,9 @@ padding-top: 40px
     padding-bottom: 10px;
   }
 }
-/*======================================================================= // PAGINA SERVICIOS =========================================================================*/
+/*========================= // PAGINA NOSOTROS (About) =========================================================================*/
 
-.video-servicios {
+.video-nosotros {
   width: 80%;
   height: cover;
   border-radius: 12px;
@@ -1251,7 +1246,7 @@ padding-top: 40px
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-  .video-servicios {
+  .video-nosotros {
     width: 100%;
     border-width: 6px;
   }
@@ -1272,7 +1267,77 @@ padding-top: 40px
   }
 }
 
-/*======================================================================= // PAGINA SERVICIOS END =========================================================================*/
+/*============================================ // PAGINA NOSOTROS (About) END=======================================================================*/
+
+
+
+/*====================================== // PAGINA SERVICIOS (Servicios) =========================================================================*/
+
+
+.video-service {
+  width: 80%;
+  height: cover;
+  border-radius: 12px;
+  display: block;
+  border: 10px solid #042f80;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  margin: 0 auto; 
+  object-fit: cover; 
+  margin-bottom: 40px; /* Esto agrega espacio hacia abajo */
+}
+
+
+/* TEXTO JUSTIFICADO */
+.text-justify {
+  text-align: justify;
+}
+
+/* SECCIÓN DE DESCRIPCIÓN */
+.descripcionServicio {
+  padding: 20px;
+}
+
+.descripcionServicio .title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* LOGO CONOCER Y OTRAS IMÁGENES */
+.descripcionServicio img,
+.text-center img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* TEXTO GENERAL */
+.descripcionServicio p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+  .descripcionServicio .title {
+    font-size: 1.4rem;
+    padding: 0 10px;
+  }
+
+  .descripcionServicio p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .text-center img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/*====================================== // PAGINA SERVICIOS (Servicios) END =========================================================================*/
 
 
 
