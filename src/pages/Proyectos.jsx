@@ -9,7 +9,7 @@ function Proyectos() {
       <div className="overlay"></div>
       <img
         src="/images/imgFondo/proyectos.jpeg"
-        alt="breadcrumb background"
+        alt="IMAGEN DE FONDO"
         className="breadcrumbImage"
       />
 </section>

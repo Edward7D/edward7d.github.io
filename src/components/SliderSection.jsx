@@ -1,26 +1,39 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 export default function SliderSection() {
-const slides = [
-  {
-    image:'/images/slider/1.jpeg',
-  },
-  {
-    image: '/images/slider/2.jpeg',
-  },
-  {
-    image: '/images/slider/3.jpeg',
-  },
-  {
-    image: '/images/slider/4.jpeg',
-  },
-];
-
-
+  const [slides, setSlides] = useState([]);
   const [current, setCurrent] = useState(0);
   const [fade, setFade] = useState(true);
   const intervalRef = useRef(null);
 
+  // Imágenes por defecto si no hay imágenes desde el backend
+  const defaultSlides = [
+    { image: '/images/slider_default/1.jpeg' },
+    { image: '/images/slider_default/2.jpeg' },
+  ];
+
+  // Obtener imágenes desde backend
+  const fetchSlides = async () => {
+    try {
+      const res = await fetch('http://localhost:4000/cienqro/slider');
+      const data = await res.json();
+      if (Array.isArray(data) && data.length > 0) {
+        setSlides(data);
+      } else {
+        setSlides(defaultSlides);
+      }
+    } catch (err) {
+      console.error('Error cargando imágenes del slider:', err);
+      setSlides(defaultSlides);
+    }
+  };
+
+  useEffect(() => {
+    fetchSlides();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+   // Función para avanzar al siguiente slider
   const nextSlide = useCallback((resetInterval = true) => {
     setFade(false);
     setTimeout(() => {
@@ -49,14 +62,25 @@ const slides = [
     }, 4000);
   };
 
+   // Inicia el autoplay del slider cada 4 segundos
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      nextSlide(false);
-    }, 4000);
+    if (slides.length > 0) {
+      intervalRef.current = setInterval(() => {
+        nextSlide(false);
+      }, 4000);
+    }
     return () => clearInterval(intervalRef.current);
-  }, [nextSlide]);
+  }, [slides.length, nextSlide]);
 
-  const { image, title, subtitle, description } = slides[current];
+  if (slides.length === 0) return null;
+
+  // Determina si la imagen es local o viene del backend
+  const { image } = slides[current];
+  const isFromBackend = image.includes('uploads'); // si contiene la palabra "uploads", es del backend
+  const fullImagePath = isFromBackend
+    ? `http://localhost:4000/${image.replace(/^\/?/, '')}`  // backend
+    : image; // frontend (React public/)
+
 
   const styles = {
     sliderSection: {
@@ -86,7 +110,6 @@ const slides = [
       right: 0,
       bottom: 0,
       backgroundColor: 'rgba(84, 84, 87, 0.2)',
-      /* backgroundColor: 'rgba(84, 84, 87, 0.4)', ORIGINAL  */
       zIndex: 1,
     },
     sliderText: {
@@ -99,34 +122,16 @@ const slides = [
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'center',
-      color: '#fff',
-      padding: '0 20px',
       opacity: fade ? 1 : 0,
       transition: 'opacity 0.5s ease',
       zIndex: 2,
-    },
-    sliderContent: {
-      maxWidth: '800px',
-    },
-    title: {
-      fontSize: '48px',
-      fontWeight: 'bold',
-      marginBottom: '20px',
-      color: '#fff',
-    },
-    span: {
-      color: '#fff', // blanco también para el subtítulo para mantenerlo uniforme
-    },
-    description: {
-      fontSize: '20px',
-      marginBottom: '30px',
-      color: '#fff',
     },
     sliderBtn: {
       display: 'flex',
       gap: '15px',
       justifyContent: 'center',
       flexWrap: 'wrap',
+      marginTop: '180px',
     },
     themeBtn: {
       padding: '12px 25px',
@@ -163,41 +168,33 @@ const slides = [
   };
 
   return (
-<section style={styles.sliderSection}>
-  <div style={styles.sliderItem}>
-    <figure style={styles.sliderImage}>
-      <img src={image} alt="slider_img" style={styles.sliderImg} />
-      <div style={styles.overlay}></div>
-    </figure>
-    <div style={styles.sliderText}>
-      <div style={styles.sliderContent}>
-        <h1 style={styles.title}>
-          {title} <span style={styles.span}>{subtitle}</span>
-        </h1>
-        <p style={styles.description}>{description}</p>
-        <div style={{ ...styles.sliderBtn, marginTop: '180px' }}>
-          <a href="/About" style={styles.themeBtn}>Conozca más</a>
-          <a href="/Contact" style={{ ...styles.themeBtn, ...styles.glassBtn }}>Contáctenos</a>
+    <section style={styles.sliderSection}>
+      <div style={styles.sliderItem}>
+        <figure style={styles.sliderImage}>
+          <img src={fullImagePath} alt="slider_img" style={styles.sliderImg} />
+          <div style={styles.overlay}></div>
+        </figure>
+        <div style={styles.sliderText}>
+          <div style={styles.sliderBtn}>
+            <a href="/About" style={styles.themeBtn}>Conozca más</a>
+            <a href="/Contact" style={{ ...styles.themeBtn, ...styles.glassBtn }}>Contáctenos</a>
+          </div>
         </div>
+        <button
+          style={{ ...styles.arrow, ...styles.leftArrow }}
+          onClick={prevSlide}
+          aria-label="Anterior"
+        >
+          &#10094;
+        </button>
+        <button
+          style={{ ...styles.arrow, ...styles.rightArrow }}
+          onClick={() => nextSlide()}
+          aria-label="Siguiente"
+        >
+          &#10095;
+        </button>
       </div>
-    </div>
-    {/* Flechas */}
-    <button
-      style={{ ...styles.arrow, ...styles.leftArrow }}
-      onClick={prevSlide}
-      aria-label="Anterior"
-    >
-      &#10094;
-    </button>
-    <button
-      style={{ ...styles.arrow, ...styles.rightArrow }}
-      onClick={() => nextSlide()}
-      aria-label="Siguiente"
-    >
-      &#10095;
-    </button>
-  </div>
-</section>
-
+    </section>
   );
 }

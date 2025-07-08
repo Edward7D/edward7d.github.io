@@ -48,7 +48,7 @@ function Home() {
               <video className="video-ajustado" controls autoPlay loop muted onPlay={() => {
               const video = document.querySelector('.video-ajustado');
               video.muted = false;  // Desactivar el mute cuando el video empieza
-            }}> <source src="/images/about/video1.mp4" type="video/mp4" />
+            }}> <source src="/images/Inicio/video1.mp4" type="video/mp4" />
               </video>
                 {/* <video className="video-ajustado" controls autoPlay muted loop>
                   <source src={`${process.env.PUBLIC_URL}/images/about/video1.mp4`} type="video/mp4" />
@@ -137,7 +137,7 @@ function Home() {
               <div className="service text-center">
                 <img
                   src="/images/servicios/6.jpeg"
-                  alt="Servicio 3"
+                  alt="Especialidad 6"
                   className="service-img"
                 />
               </div>
@@ -147,7 +147,7 @@ function Home() {
               <div className="service text-center">
                 <img
                   src="/images/servicios/7.jpeg"
-                  alt="Servicio 1"
+                  alt="Especialidad 7"
                   className="service-img"
                 />
               </div>
@@ -157,7 +157,7 @@ function Home() {
               <div className="service text-center">
                 <img
                   src="/images/servicios/8.jpeg"
-                  alt="Servicio 2"
+                  alt="Especialidad 8"
                   className="service-img"
                 />
               </div>
@@ -167,7 +167,7 @@ function Home() {
               <div className="service text-center">
                 <img
                   src="/images/servicios/9.jpeg"
-                  alt="Servicio 3"
+                  alt="Especialidad 9"
                   className="service-img"
                 />
               </div>
@@ -177,7 +177,7 @@ function Home() {
               <div className="service text-center">
                 <img
                   src="/images/servicios/10.jpeg"
-                  alt="Servicio 3"
+                  alt="Especialidad 10"
                   className="service-img"
                 />
               </div>
@@ -187,7 +187,7 @@ function Home() {
               <div className="service text-center">
                 <img
                   src="/images/servicios/11.jpeg"
-                  alt="Servicio 1"
+                  alt="Especialidad 11"
                   className="service-img"
                 />
               </div>
@@ -197,7 +197,7 @@ function Home() {
               <div className="service text-center">
                 <img
                   src="/images/servicios/12.jpeg"
-                  alt="Servicio 2"
+                  alt="Especialidad 12"
                   className="service-img"
                 />
               </div>
@@ -207,7 +207,7 @@ function Home() {
               <div className="service text-center">
                 <img
                   src="/images/servicios/13.jpeg"
-                  alt="Servicio 3"
+                  alt="Especialidad 13"
                   className="service-img"
                 />
               </div>
@@ -217,7 +217,7 @@ function Home() {
               <div className="service text-center">
                 <img
                   src="/images/servicios/14.jpeg"
-                  alt="Servicio 3"
+                  alt="Especialidad 14"
                   className="service-img"
                 />
               </div>
@@ -227,7 +227,7 @@ function Home() {
               <div className="service text-center">
                 <img
                   src="/images/servicios/15.jpg"
-                  alt="Servicio 3"
+                  alt="Especialidad 15"
                   className="service-img"
                 />
               </div>

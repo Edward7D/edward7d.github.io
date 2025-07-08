@@ -26,7 +26,7 @@ function Servicios() {
         <div className="overlay"></div>
         <img
           src="/images/imgFondo/servicios.jpeg"
-          alt="breadcrumb background"
+          alt="IMAGEN DE FONDO"
           className="breadcrumbImage"
         />
       </section>
@@ -44,7 +44,7 @@ function Servicios() {
                 loop
                 playsInline
               >
-                <source src="/images/about/IPMA.mp4" type="video/mp4" />
+                <source src="/images/paginaServicios/IPMA.mp4" type="video/mp4" />
               </video>
             </div>
 
@@ -57,7 +57,7 @@ function Servicios() {
             <div className="col-md-12 text-center my-5">
               <div className="d-flex flex-column align-items-center">
                 <img
-                  src="/images/about/conocer.png"
+                  src="/images/paginaServicios/conocer.png"
                   alt="Logo CONOCER"
                   style={{ width: "500px", marginBottom: "20px" }}
                 />
@@ -85,8 +85,8 @@ function Servicios() {
             <div className="col-md-12 text-center my-5">
               <div className="d-flex flex-column align-items-center">
                 <img
-                  src="/images/about/IPMA.jpeg"
-                  alt="Logo CONOCER"
+                  src="/images/paginaServicios/IPMA.jpeg"
+                  alt="IMPA CIENQRO"
                   style={{ width: "700px", marginBottom: "50px", marginTop: "50px" }}
                 />
 
@@ -98,7 +98,7 @@ function Servicios() {
               <strong>El mundo de IPMA® </strong>lo conformamos más de 70 Asociaciones en igual número de naciones.
             </p>
                 <img
-                  src="/images/about/mapIPMA.png"
+                  src="/images/paginaServicios/mapIPMA.png"
                   alt="Mapa IPMA"
                   className="img-fluid"
                   style={{ maxWidth: "90%", borderRadius: "10px" }}

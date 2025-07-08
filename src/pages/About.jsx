@@ -26,7 +26,7 @@ function About() {
         <div className="overlay"></div>
         <img
           src="/images/imgFondo/nosotros.jpeg"
-          alt="breadcrumb background"
+          alt="IMAGEN DE FONDO"
           className="breadcrumbImage"
         />
       </section>
@@ -44,7 +44,7 @@ function About() {
                 playsInline
               >
                 <source
-                  src="/images/servicios/videoser1.mp4"
+                  src="/images/about/videoAbout.mp4"
                   type="video/mp4"
                 />
               </video>
