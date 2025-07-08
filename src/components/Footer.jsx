@@ -13,7 +13,7 @@ function Footer() {
                   <div className="col-md-4 col-xs-12 m-margin">
                     <h4>Teléfono</h4>
                     <p>
-                      <a href="tel:07938857242">442 269 1186</a>
+                      <a>442 269 1186</a>
                     </p>
                   </div>
                   <div className="col-md-4 col-xs-12 m-margin">

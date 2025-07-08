@@ -44,7 +44,7 @@ function Contact() {
                   </div>
                   <div className="singleContadds phone">
                     <i className="fa fa-phone"></i>
-                    <p>NO TIENEN - <span>Oficina</span></p>
+                    <p> - <span>Oficina</span></p>
                     <p>442 269 1186 - <span>Móvil</span></p>
                   </div>
                   <div className="singleContadds">

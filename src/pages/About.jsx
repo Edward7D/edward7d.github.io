@@ -36,7 +36,7 @@ function About() {
           <div className="row">
             <div className="col-md-12 col-sm-12 col-xs-12">
               <video
-                className="video-servicios"
+                className="video-nosotros"
                 ref={videoRef}
                 controls
                 muted

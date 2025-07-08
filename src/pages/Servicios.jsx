@@ -37,7 +37,7 @@ function Servicios() {
             {/* VIDEO */}
             <div className="col-md-12 col-sm-12 col-xs-12">
               <video
-                className="video-servicios"
+                className="video-service"
                 ref={videoRef}
                 controls
                 muted
@@ -49,7 +49,7 @@ function Servicios() {
             </div>
 
             {/* DESCRIPCIÓN */}
-            <div className="col-md-12 descripcionColegio">
+            <div className="col-md-12 descripcionServicio">
               <h4 className="title mt-5">
                 Certificación en Dirección de Proyectos con Base en IPMA e Integración al Sistema Nacional de Competencias (CONOCER)
               </h4>
