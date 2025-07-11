@@ -1306,12 +1306,12 @@ padding-top: 40px
 }
 
 /* LOGO CONOCER Y OTRAS IMÁGENES */
-.descripcionServicio img,
+/* .descripcionServicio img,
 .text-center img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-}
+} */
 
 /* TEXTO GENERAL */
 .descripcionServicio p {

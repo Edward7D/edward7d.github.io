@@ -8,16 +8,24 @@ function Servicios() {
     const video = videoRef.current;
 
     if (video) {
+      video.muted = true; // Asegura que esté silenciado al inicio
+
       if (isDesktop) {
         video.setAttribute("autoplay", "true");
-        video.play().catch((err) =>
-          console.warn("Autoplay bloqueado por el navegador:", err)
-        );
+
+        // Inicia la reproducción automática
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch((err) =>
+            console.warn("Autoplay bloqueado por el navegador:", err)
+          );
+        }
       } else {
         video.removeAttribute("autoplay");
       }
     }
   }, []);
+
 
   return (
     <div>

@@ -95,7 +95,7 @@ function Contact() {
                     </div>
                   </div>
                   
-                  <input type="hidden" name="_next" value="https://edward7d.github.io/"/>
+                  <input type="hidden" name="_next" value="http://localhost:5173/Contact"/>
                    {/* <input type="hidden" name="_next" value="https://TUDOMINIO.COM/Contact" />  Servidor */}
                   {/* <input type="hidden" name="_next" value="http://localhost:5173/Contact" />  Localhost */}
                   {/*  <input type="hidden" name="_next" value="https://edward7d.github.io/"/> */}
