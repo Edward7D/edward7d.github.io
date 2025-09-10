@@ -1932,8 +1932,11 @@ padding-bottom:20px;
      left: 20px;
 }
  .proDetaTitle{
-     font-size: 20px;
-     margin-bottom: 26px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;  /* centrado */
+  line-height: 1.4;     /* más espacio entre renglones */
+
 }
  .projectDetais p{
      font-size: 14px;
@@ -1945,19 +1948,27 @@ padding-bottom:20px;
      color: #000;
      margin-bottom: 17px;
 }
+
  .projectSingleInfo{
      margin-bottom: 60px;
 }
- .projectSingleInfo ul{
-}
+
  .projectSingleInfo ul li{
      line-height: .8;
      border-bottom: 1px solid #eeeeee;
      display: block;
      padding: 19px 0;
+     font-size: 16px;
 }
- .projectSingleInfo ul li span{
-     color: #393939;
+.projectSingleInfo ul li span:first-child {
+  color: #393939;
+  font-weight: 600;   /* negritas solo al label */
+  margin-right: 5px;  /* separación con el valor */
+  display: inline-block;
+}
+
+.projectSingleInfo ul li {
+  line-height: 1.6;   /* espacio entre líneas sin cortar */
 }
  .projectSininTitle.two{
      margin-bottom: 25px;
@@ -2005,3 +2016,15 @@ padding-bottom:20px;
      background: #333;
 }
 
+.singleProCaro .carousel-inner {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* opcional: centra verticalmente */
+}
+
+.singleProCaro .carousel-inner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* asegura el centrado cuando no usas flexbox */
+}

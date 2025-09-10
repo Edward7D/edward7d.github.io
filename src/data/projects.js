@@ -1,21 +1,24 @@
 const projects = [
   {
-    id: 1,
-    title: "INSTALACION DE PROTECCION CIVIL",
+  id: 1,
+  title: "Obra Civil y Electromecánica de la Estación de Bombeo Sanitario",
     images: [
       `/images/project/project1.jpg`,
-      `/images/project/p7.jpeg`,
-      `/images/project/project1.2.jpg`,
-      `/images/project/project1.3.jpg`
+      `/images/project/1.png`,
+      `/images/project/2.png`,
+      `/images/project/3.png`
     ],
-    createDate: "Marzo 2018",
-    location: "Queretaro, Pueblito",
-    value: "$270,000",
-    category: "Proteccion civil",
-    description: `On the other hand, we denounce with righteous indignation and dislike
-                  men who are so beguiled and demoralized by the charms of pleasure of
-                  the moment`,
-    moreDetails: 'ESTE TEXTO ES DE PRUEBA PARA SABER QUE SI FUNCIONA'
+    engineer: "Ing. José Antonio Márquez Jáuregui (MAJA INGENIEROS Y ARQUITECTOS SA DE CV)",
+    createDate: "31 de marzo del 2025", 
+    location: "Querétaro, México",       
+    value: "$16,265,545.81",
+    category: "Obra civil y electromecánica",
+    description: {
+    resumen: "Reporte fotográfico de obra terminada y equipamiento.",
+    inicio: "28 de febrero del 2024",
+    plazo: "600 días",
+    finalizacion: "31 de marzo del 2025"
+},
   },
   {
     id: 2,

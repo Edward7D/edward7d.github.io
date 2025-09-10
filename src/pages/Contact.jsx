@@ -59,7 +59,7 @@ function Contact() {
             <div className="col-sm-8">
               <h2 className="commentTitle">Envíanos un Mensaje</h2>
               <div className="commentForm">
-                <form action="https://formsubmit.co/eduardomtzduarte09@gmail.com" method="POST" id="contactForm">
+                <form action="https://formsubmit.co/informes@cienqro.mx" method="POST" id="contactForm">
                   <div className="row">
                     <div className="col-lg-6 formmargin">
                       <input
@@ -98,7 +98,6 @@ function Contact() {
                   <input type="hidden" name="_next" value="http://localhost:5173/Contact"/>
                    {/* <input type="hidden" name="_next" value="https://TUDOMINIO.COM/Contact" />  Servidor */}
                   {/* <input type="hidden" name="_next" value="http://localhost:5173/Contact" />  Localhost */}
-                  {/*  <input type="hidden" name="_next" value="https://edward7d.github.io/"/> */}
                   {/* Desactiva captcha */}
                   <input type="hidden" name="_captcha" value="false" />
                 </form>

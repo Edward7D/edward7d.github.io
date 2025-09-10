@@ -26,10 +26,14 @@ const ProjectDetail = () => {
         />
       </section>
 
+       {/* TITULO DEL PROYECTO */}
       <section className="projectSingleSec">
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
+              <h2 className="proDetaTitle">{project.title}</h2>
+
+              {/* CARRUSEL DE IMÁGENES */}
               <div className="singleProCaro">
                 <div id="myCarousel" className="carousel slide" data-ride="carousel">
                   <ol className="carousel-indicators">
@@ -78,16 +82,18 @@ const ProjectDetail = () => {
                   </a>
                 </div>
               </div>
+              {/*DETALLES DEL PROYECTO */}
               <div className="projectDetais">
-                <h2 className="proDetaTitle">{project.title}</h2>
                 <p>{project.moreDetails}</p>
               </div>
             </div>
-
             <div className="col-lg-4">
               <div className="projectSingleInfo">
                 <h2 className="projectSininTitle">Información del Proyecto</h2>
                 <ul>
+                  <li>
+                    <span>Ingeniero residente:</span> {project.engineer}
+                  </li>
                   <li>
                     <span>Fecha de creación:</span> {project.createDate}
                   </li>
@@ -103,9 +109,14 @@ const ProjectDetail = () => {
                 </ul>
               </div>
               <div className="projectSingleText">
-                <h2 className="projectSininTitle two">Detalles adicionales</h2>
-                <p>{project.description}</p>
-              </div>
+              <h2 className="projectSininTitle two">Detalles adicionales</h2>
+              <p>{project.description.resumen}</p>
+              <ul className="projectDetailsList">
+                <li><i className="fa fa-calendar"></i> <strong>Fecha de inicio:</strong> {project.description.inicio}</li>
+                <li><i className="fa fa-clock-o"></i> <strong>Plazo contractual:</strong> {project.description.plazo}</li>
+                <li><i className="fa fa-flag-checkered"></i> <strong>Finalización:</strong> {project.description.finalizacion}</li>
+              </ul>
+            </div>
             </div>
           </div>
         </div>
